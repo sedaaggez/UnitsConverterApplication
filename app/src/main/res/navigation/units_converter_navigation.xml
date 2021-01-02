@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/units_converter_navigation"
+    app:startDestination="@id/unitsFragment">
+
+    <fragment
+        android:id="@+id/unitsFragment"
+        android:name="com.sedaaggez.unitsconverterapplication.UnitsFragment"
+        android:label="Units"
+        tools:layout="@layout/fragment_units">
+        <action
+            android:id="@+id/action_unitsFragment_to_converterFragment"
+            app:destination="@id/converterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/converterFragment"
+        android:name="com.sedaaggez.unitsconverterapplication.ConverterFragment"
+        android:label="Converter"
+        tools:layout="@layout/fragment_converter">
+        <action
+            android:id="@+id/action_converterFragment_to_unitsFragment"
+            app:destination="@id/unitsFragment" />
+    </fragment>
+</navigation>
